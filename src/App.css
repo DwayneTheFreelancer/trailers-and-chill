@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap');
 
-
-body {
+html, body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  height: 100%;
   background-color: #292A37;
   color: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  /* padding: 20px; */
+  /* min-height: 100%;  */
+  flex: 1 0 auto;
 }
 
 .header {
@@ -133,5 +144,13 @@ body {
 
 
 footer {
+  flex-shrink: 0;
   border: 1px solid #fff;
+  /* height: 50px; */
+  /* position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center; */
 }

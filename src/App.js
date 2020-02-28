@@ -1,18 +1,19 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import TopRatedContainer from './components/TopRatedContainer';
-import NewReleases from './components/NewReleases';
-import SearchTrailer from './components/SearchTrailer';
+// import Homepage from './components/Homepage';
+// import Blog from './components/Blog';
 import Footer from './components/Footer';
+import AppContainer from './components/AppContainer';
+// import ResultsDetail from './components/ResultsDetail';
+// import { Switch, Route } from 'react-router-dom';
 
 function App() {
+
   return (
-    <div>
+    <div className="app">
       <Header />
-      <TopRatedContainer />
-      <NewReleases />
-      <SearchTrailer />
+      <AppContainer />
       <Footer />
     </div>
   );

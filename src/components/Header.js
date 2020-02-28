@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <nav className="header">
           <div>
-            <NavLink to={""}>Trailers & Chill</NavLink>
+            <NavLink exact to={"/"}>Trailers & Chill</NavLink>
           </div>
           <div className="links">
             <NavLink className="link" to={"/blog"}>Blog</NavLink>
