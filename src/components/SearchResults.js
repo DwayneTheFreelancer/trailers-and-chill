@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link, Route } from 'react-router-dom';
+import ResultsDetail from './ResultsDetail';
 
 const searchResults = (props) => {
     return (
@@ -18,12 +20,18 @@ const searchResults = (props) => {
                     } else {
                         return (
                             <div className="search-result" key={searchResult.id}>
-                                <h2>{searchResult.title}</h2>
-                                <img src={`${props.imageBaseURL}${searchResult.poster_path}`} alt="movie images" />
+                                <Link to={`/movie/${searchResult.id}`}>
+                                    <h2>{searchResult.title}</h2>
+                                    <img src={`${props.imageBaseURL}${searchResult.poster_path}`} alt="movie images" />
+                                </Link>
                             </div>
                         )
                     }
                 })}
+                <Route 
+                    path="/movie/:id" 
+                    render={ (props) => <ResultsDetail results={props.results} {...props}  /> }
+                />
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import ResultsDetail from './ResultsDetail';
 
 const NewReleaseDetails = (props) => {
     return (
@@ -11,10 +12,16 @@ const NewReleaseDetails = (props) => {
                 {props.results.map((result) => {
                     return (
                         <div key={result.id} className="release">
-                            <img src={`${props.imageBaseURL}${result.poster_path}`} alt="new released movies" />
+                            <Link to={`/movie/${result.id}`}>
+                                <img src={`${props.imageBaseURL}${result.poster_path}`} alt="new released movies" />
+                            </Link>
                         </div>
                     )
                 })}
+                <Route 
+                    path="/movie/:id" 
+                    render={ (props) => <ResultsDetail results={props.results} {...props}  /> }
+                />
             </div>
         </div>
     )

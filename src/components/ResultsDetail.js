@@ -2,7 +2,6 @@ import React from 'react';
 
 const ResultsDetail = (props) => {
     const { match: { params: { id } }, results } = props;
-    // const { results } = props;
     console.log(results);
     const selectedMovie = results.find((element) => {
         return parseInt(id) === element.id;

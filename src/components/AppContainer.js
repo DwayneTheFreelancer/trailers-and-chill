@@ -100,7 +100,7 @@ export class AppContainer extends Component {
     render() {
         const { topRatedResults, newReleasesResults, userResponse } = this.state;
         console.log(newReleasesResults)
-        topRatedResults.length = 3;
+        // topRatedResults.length = 3;
         newReleasesResults.length = 4;
         const IMG_BASE_URL = `https://image.tmdb.org/t/p/w500`;
         return (
