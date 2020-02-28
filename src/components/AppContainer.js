@@ -12,7 +12,7 @@ const BASE_MOVIE_URL = `https://api.themoviedb.org/3/discover/movie/?api_key=`;
 const TOP_RATED_END_URL = `&/discover/movie?sort_by=popularity.desc`;
 
 // For new released movies
-const NEW_RELEASES_URL = "&/discover/movie?primary_release_date.gte=2019-11-15&primary_release_date.lte=2019-12-22";
+const NEW_RELEASES_URL = `&/discover/movie?primary_release_date.gte=2019-11-15&primary_release_date.lte=2019-12-22`;
 
 // For when the user searches for a movie
 const BASE_SEARCH_URL = `https://api.themoviedb.org/3/search/movie?api_key=`;
@@ -75,7 +75,6 @@ export class AppContainer extends Component {
             this.setState({
                 userResponse: response.data.results
             });
-            console.log(this.state.userResponse);
             // Clears the input field after search is finish
             document.querySelector(".user-input").value = "";
         } catch (error) {
@@ -100,7 +99,7 @@ export class AppContainer extends Component {
     render() {
         const { topRatedResults, newReleasesResults, userResponse } = this.state;
         console.log(newReleasesResults)
-        // topRatedResults.length = 3;
+        topRatedResults.length = 3;
         newReleasesResults.length = 4;
         const IMG_BASE_URL = `https://image.tmdb.org/t/p/w500`;
         return (
