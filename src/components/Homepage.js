@@ -23,54 +23,6 @@ export class Homepage extends Component {
         }
     }
 
-    // componentDidMount() {
-    //     this.fetchTopRatedResults();
-    //     this.fetchNewReleasesResults();
-    // }
-
-    // async fetchTopRatedResults() {
-    //     try {
-    //         const response = await axios.get(`${BASE_MOVIE_URL}${API_KEY}${TOP_RATED_END_URL}`);
-    //         this.setState({
-    //             topRatedResults: response.data.results
-    //         });
-    //         console.log(response);
-    //     } catch(error) {
-    //         console.log(error);
-    //     }
-    // }
-
-    // async fetchNewReleasesResults() {
-    //     try {
-    //         const response = await axios.get(`${BASE_MOVIE_URL}${API_KEY}${NEW_RELEASES_URL}`);
-    //         console.log(response);
-    //         this.setState({
-    //             newReleasesResults: response.data.results
-    //         });
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
-
-    // async fetchUserData() {
-    //     try {
-    //         // Gets response from the API and stores user search data in the URL
-    //         // The this.state.q is the users in put which fills into the name attribute in the input tag
-    //         const response = await axios.get(`${BASE_SEARCH_URL}${API_KEY}&query=${this.state.query}&page=1&include_adult=true`);
-    //         console.log(this.state.query);
-    //         // Updates the state to the res and puts the data in an array
-    //         this.setState({
-    //             query: '',
-    //             userResponse: response.data.results
-    //         });
-    //         console.log(this.state.userResponse);
-    //         // Clears the input field after search is finish
-    //         document.querySelector(".user-input").value = "";
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }
-
     // Targets the name and value of the event target to be handled
     handleOnChange = (event) => {
         this.setState({
@@ -83,7 +35,7 @@ export class Homepage extends Component {
         e.preventDefault();
         // Used callback fetchData to submit data
         // this.fetchUserData();
-        console.log('make api call from AppContainer')
+        // make api call from AppContainer
         const userQuery = this.state.query
         this.props.handleSearch(userQuery)
 

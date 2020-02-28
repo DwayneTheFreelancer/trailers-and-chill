@@ -59,8 +59,8 @@ export class AppContainer extends Component {
     }
 
     search = (query) => {
-        console.log('querying from AppContainer')
-        console.log(query)
+        //querying from AppContainer
+        //console.log(query)
 
         this.fetchUserData(query)
     }
@@ -124,8 +124,15 @@ export class AppContainer extends Component {
           
                     <Route 
                         path="/movie/:id" 
-                        render={(routerProps) => <ResultsDetail results={this.state.topRatedResults} {...routerProps} /> }
+                        render={(routerProps) => 
+                        <ResultsDetail 
+                            results={this.state.topRatedResults} 
+                            newReleasesResults={this.state.newReleasesResults} 
+                            searchTrailersResults={this.state.userResponse}
+                            {...routerProps} /> 
+                        }
                     />
+                    
                 </Switch>
             </div>
         )

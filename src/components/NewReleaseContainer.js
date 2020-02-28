@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import ResultsDetail from './ResultsDetail';
 
-const NewReleaseDetails = (props) => {
+const NewReleaseContainer = (props) => {
     return (
         <div className="new-releases">
             <div className="new-releases-name">
@@ -20,11 +20,11 @@ const NewReleaseDetails = (props) => {
                 })}
                 <Route 
                     path="/movie/:id" 
-                    render={ (props) => <ResultsDetail results={props.results} {...props}  /> }
+                    render={ (props) => <ResultsDetail results={this.state.newReleasesResults} {...props}  /> }
                 />
             </div>
         </div>
     )
 }
 
-export default NewReleaseDetails;
+export default NewReleaseContainer;

@@ -30,7 +30,7 @@ const searchResults = (props) => {
                 })}
                 <Route 
                     path="/movie/:id" 
-                    render={ (props) => <ResultsDetail results={props.results} {...props}  /> }
+                    render={ (props) => <ResultsDetail results={this.state.userResponse} {...props}  /> }
                 />
             </div>
         </div>

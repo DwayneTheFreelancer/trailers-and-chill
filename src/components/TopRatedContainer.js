@@ -18,15 +18,10 @@ const TopRatedContainer = (props) => {
                         </div>
                     )
                 })}
-                {/* <ResultsDetail results={props.results} /> */}
                 <Route 
                     path="/movie/:id" 
                     render={ (props) => <ResultsDetail results={props.results} {...props}  /> }
                 />
-                {/* <Route 
-                    path="/movie/:id" 
-                    render={ (props) => <ResultsDetail results={props.results} {...props} /> }
-                /> */}
             </div>
         </div>
     )
